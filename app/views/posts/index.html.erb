@@ -1,0 +1,14 @@
+<h1>Welcome to the Blog</h1>
+
+<div class="posts-container">
+  <% @posts.each do |post| %>
+    <div class="post">
+      <h2 class="post-title"><%= post.title %></h2>
+      <p class="post-content"><%= post.content %></p>
+      <% if post.image.attached? %>
+        <%= image_tag post.image %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
